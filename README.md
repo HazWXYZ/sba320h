@@ -1,16 +1,38 @@
-# React + Vite
+# GoodNews
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I made this app because I was tired of only seeing stressful news. GoodNews lets you search for any topic and browse headlines by category — you can save articles you want to read later and they'll still be there when you come back.
 
-Currently, two official plugins are available:
+## Technologies Used
+- **React 18** — component-based UI
+- **Redux Toolkit** — global state management (articles, search, saved list)
+- **GNews API** — free AJAX news data fetched from an external API
+- **localStorage** — persists saved articles across browser sessions
+- **Vite** — development build tool (faster than CRA)
+- **CSS Modules** — scoped styles per component
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Approach
+I started by figuring out what state needed to be global vs local. Articles, the active category, search query, and saved articles all live in Redux because multiple components need to read or update them. Local component state only handles the search input value.
 
-## React Compiler
+The `fetchNews` async thunk handles the AJAX call. When it fails (like when the API key isn't set), it falls back to hardcoded sample articles so the app still looks functional.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`localStorage` is synced every time `toggleSave` runs in the reducer, and loaded once when the app first boots.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Usage
+1. Pick a category using the filter buttons
+2. Or search for any topic using the search bar
+3. Click "Read full story" to open the original article in a new tab
+4. Click ☆ Save to bookmark an article — it'll stay saved even after you close the browser
+
+## Getting Started Locally
+```bash
+npm install
+# Add your free GNews API key in src/features/newsSlice.js
+npm run dev
+```
+
+## Unsolved Problems
+- Saved articles from a search don't re-fetch their data on reload, so the source URL needs to be valid at save time
+- The GNews free tier limits requests to 100/day
+- No dark mode yet (would be a fun addition)
+- Live site not setup
