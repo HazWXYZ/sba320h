@@ -1,0 +1,29 @@
+.categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.cat-btn {
+  padding: 5px 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #444;
+  transition: all 0.15s;
+}
+
+.cat-btn:hover {
+  border-color: #16213e;
+  color: #16213e;
+}
+
+.cat-btn.active {
+  background: #16213e;
+  color: #f5c518;
+  border-color: #16213e;
+  font-weight: bold;
+}

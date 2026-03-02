@@ -1,0 +1,28 @@
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.feed-msg {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+  font-size: 15px;
+}
+
+.api-notice {
+  background: #fff8e1;
+  border: 1px solid #f5c518;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #555;
+}
+
+.search-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 16px;
+}
