@@ -13,9 +13,7 @@
   outline: none;
 }
 
-.search-input:focus {
-  border-color: #16213e;
-}
+.search-input:focus { border-color: #16213e; }
 
 .search-btn {
   padding: 10px 22px;
@@ -28,9 +26,7 @@
   font-size: 14px;
 }
 
-.search-btn:hover {
-  background: #0f3460;
-}
+.search-btn:hover { background: #0f3460; }
 
 .clear-btn {
   padding: 10px 14px;

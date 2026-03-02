@@ -2,7 +2,7 @@
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   transition: transform 0.15s, box-shadow 0.15s;
@@ -10,14 +10,10 @@
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.card-img {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
-}
+.card-img { width: 100%; height: 175px; object-fit: cover; }
 
 .card-body {
   padding: 14px;
@@ -42,10 +38,7 @@
   border-radius: 10px;
 }
 
-.time-ago {
-  font-size: 11px;
-  color: #999;
-}
+.time-ago { font-size: 11px; color: #999; }
 
 .card-title {
   font-size: 15px;
@@ -74,9 +67,7 @@
   font-weight: bold;
 }
 
-.read-link:hover {
-  color: #0f3460;
-}
+.read-link:hover { color: #0f3460; }
 
 .save-btn {
   background: transparent;
@@ -89,10 +80,7 @@
   transition: all 0.15s;
 }
 
-.save-btn:hover {
-  border-color: #f5c518;
-  color: #f5c518;
-}
+.save-btn:hover { border-color: #f5c518; color: #f5c518; }
 
 .save-btn.saved {
   background: #f5c518;

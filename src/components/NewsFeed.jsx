@@ -6,11 +6,8 @@ import "./NewsFeed.css";
 
 function NewsFeed() {
   const dispatch = useDispatch();
-  const { articles, status, error, searchQuery } = useSelector(
-    (state) => state.news
-  );
+  const { articles, status, searchQuery } = useSelector((state) => state.news);
 
-  // Fetch general news on first load
   useEffect(() => {
     dispatch(fetchNews({ query: null, category: "general" }));
   }, [dispatch]);
@@ -20,28 +17,21 @@ function NewsFeed() {
   }
 
   if (!articles.length) {
-    return (
-      <div className="feed-msg">
-        No articles found. Try searching for something else!
-      </div>
-    );
+    return <div className="feed-msg">No articles found. Try a different search!</div>;
   }
 
   return (
     <div>
       {status === "failed" && (
         <div className="api-notice">
-          ⚠️ Couldn't connect to GNews API — showing sample stories. Add your
-          free API key in <code>newsSlice.js</code> to load live articles.
+          ⚠️ Couldn't connect to GNews — showing sample stories. Add your free API key in <code>newsSlice.js</code> to load live articles.
         </div>
       )}
-
       {searchQuery && (
         <p className="search-label">
           Results for: <strong>"{searchQuery}"</strong>
         </p>
       )}
-
       <div className="news-grid">
         {articles.map((article, i) => (
           <NewsCard key={i} article={article} />

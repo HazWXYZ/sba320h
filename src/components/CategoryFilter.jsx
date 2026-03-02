@@ -2,16 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchNews, setCategory } from "../features/newsSlice";
 import "./CategoryFilter.css";
 
-// All available GNews categories
-const CATEGORIES = [
-  "general",
-  "world",
-  "technology",
-  "business",
-  "sports",
-  "science",
-  "health",
-];
+const CATEGORIES = ["general", "world", "technology", "business", "sports", "science", "health"];
 
 function CategoryFilter() {
   const dispatch = useDispatch();

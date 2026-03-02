@@ -12,7 +12,6 @@ function App() {
   return (
     <div className="app">
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-
       <main className="main-content">
         {activeTab === "home" && (
           <>
@@ -21,10 +20,8 @@ function App() {
             <NewsFeed />
           </>
         )}
-
         {activeTab === "saved" && <SavedPage />}
       </main>
-
       <footer className="footer">
         <p>GoodNews © 2026 — Built with React &amp; Redux Toolkit</p>
       </footer>

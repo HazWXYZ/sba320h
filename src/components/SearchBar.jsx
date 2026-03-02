@@ -12,7 +12,6 @@ function SearchBar() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!inputVal.trim()) return;
-
     dispatch(setSearchQuery(inputVal.trim()));
     dispatch(fetchNews({ query: inputVal.trim(), category: null }));
   }
@@ -32,9 +31,7 @@ function SearchBar() {
         value={inputVal}
         onChange={(e) => setInputVal(e.target.value)}
       />
-      <button type="submit" className="search-btn">
-        Search
-      </button>
+      <button type="submit" className="search-btn">Search</button>
       {activeQuery && (
         <button type="button" className="clear-btn" onClick={handleClear}>
           ✕ Clear

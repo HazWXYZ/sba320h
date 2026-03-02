@@ -22,9 +22,7 @@
   gap: 10px;
 }
 
-.logo-icon {
-  font-size: 28px;
-}
+.logo-icon { font-size: 28px; }
 
 .logo-name {
   font-size: 22px;
@@ -38,10 +36,7 @@
   color: #aaa;
 }
 
-.nav {
-  display: flex;
-  gap: 8px;
-}
+.nav { display: flex; gap: 8px; }
 
 .nav-btn {
   background: transparent;

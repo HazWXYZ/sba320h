@@ -11,7 +11,6 @@ function Header({ activeTab, setActiveTab }) {
             <span className="logo-tagline">positive stories, every day</span>
           </div>
         </div>
-
         <nav className="nav">
           <button
             className={`nav-btn ${activeTab === "home" ? "active" : ""}`}

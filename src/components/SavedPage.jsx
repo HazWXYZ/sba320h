@@ -10,8 +10,7 @@ function SavedPage() {
       <div className="feed-msg">
         <p>Nothing saved yet!</p>
         <p style={{ marginTop: 8, fontSize: 13 }}>
-          Hit ☆ Save on any article to bookmark it here. Your saves persist
-          even after closing the browser.
+          Hit ☆ Save on any article to bookmark it. Your saves persist even after closing the browser.
         </p>
       </div>
     );
@@ -20,7 +19,7 @@ function SavedPage() {
   return (
     <div>
       <h2 style={{ marginBottom: 20, color: "#16213e" }}>
-        Your Saved Articles ({savedArticles.length})
+        Saved Articles ({savedArticles.length})
       </h2>
       <div className="news-grid">
         {savedArticles.map((article, i) => (
